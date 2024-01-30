@@ -1,0 +1,8 @@
+.footer_content ul li {
+    cursor: pointer;
+
+}
+
+.footer_content ul li:hover {
+    text-decoration: underline;
+}

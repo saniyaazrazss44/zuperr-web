@@ -1,0 +1,15 @@
+.main {
+    background-image: url('../../assets/zupperBg.jpg'), linear-gradient(rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.329));
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    /* background-attachment: fixed; */
+    width: 100%;
+    height: 100vh;
+}
+
+.main_text {
+    line-height: 4rem;
+    font-size: 2.5rem;
+}
