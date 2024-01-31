@@ -1,9 +1,33 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './CompanyRegistration.css'
 import Navbar from '../../Navbar/Navbar'
 import Footer from '../../Footer/Footer'
+import axios from 'axios'
 
 const CompanyRegistration = () => {
+
+    const [stateList, setStateList] = useState([])
+
+    const apiStateList = () => {
+
+        axios.get('https://backend.zuperr.co/general/listAllState')
+            .then((resp) => {
+                if (resp.data.status) {
+                    console.log(resp.data.response)
+                    setStateList(resp.data.response)
+                } else {
+                    console.log("Error")
+                }
+            })
+            .catch((error) => {
+                console.log("Error while fetching", error)
+            })
+    }
+
+    useEffect(() => {
+        apiStateList()
+    }, [])
+
     return (
         <div>
             <Navbar />
@@ -45,12 +69,10 @@ const CompanyRegistration = () => {
                         </div>
                         <div>
                             <label className="block mb-2 text-sm font-medium text-black">State</label>
-                            <select id="" className="border border-gray-400  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-black bg-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected="">Select State</option>
-                                <option value="TV">TV/Monitors</option>
-                                <option value="PC">PC</option>
-                                <option value="GA">Gaming/Console</option>
-                                <option value="PH">Phones</option>
+                            <select id='' className="border border-gray-400  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-black bg-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                {stateList.map((item, index) => (
+                                    <option value={item.state_id}>{item.state_name}</option>
+                                ))}
                             </select>
                         </div>
                         <div>

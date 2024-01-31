@@ -38,8 +38,8 @@ const SignIn = () => {
                                     <button type="submit" className="w-full text-white bg-btnBlue hover:bg-btnDarkBlue focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Sign in</button>
 
                                     <Link to='/sign-up'>
-                                        <p className="text-sm py-4 font-light text-black">
-                                            Don’t have an account yet? <a href="#" className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                                        <p className="flex gap-2 text-sm py-4 font-light text-black">
+                                            Don’t have an account yet? <p className="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</p>
                                         </p>
                                     </Link>
                                 </form>

@@ -8,7 +8,7 @@ const SignUp = () => {
     return (
         <div>
             <Navbar />
-            <div className='mt-16 pt-8 h-screen pb-24 main-signUp'>
+            <div className='mt-16 pt-8 h-screen flex items-center justify-center pb-24 main-signUp'>
 
                 <section className="w-full">
                     <div className="flex flex-col items-center justify-center px-6 lg:py-0">

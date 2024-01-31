@@ -15,8 +15,8 @@ const Navbar = () => {
                 </Link>
                 <div className='w-full'>
                     <ul className='flex items-center justify-end'>
-                        <li className='px-6 py-6 hover:text-btnBlue text-black font-semibold'>Employer</li>
-                        <li className='px-6 py-6 hover:text-btnBlue text-black font-semibold'>Job Seeker</li>
+                        <li className='px-6 py-6 hover:text-btnBlue text-black font-semibold cursor-pointer'>Employer</li>
+                        <li className='px-6 py-6 hover:text-btnBlue text-black font-semibold cursor-pointer'>Job Seeker</li>
                         <li>
                             <Link to='/company-registration'><button className='bg-btnBlue hover:bg-btnDarkBlue cursor-pointer px-6 py-3 rounded-lg text-white font-semibold'>Company Registration</button></Link>
                         </li>
